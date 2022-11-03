@@ -103,24 +103,24 @@ forge test --gas-report
 ## Scoping Details 
 ```
 - If you have a public code repo, please share it here: N/A 
-- How many contracts are in scope?: 1
+- How many contracts are in scope?: 4
 - Total SLoC for these contracts?: 800
-- How many external imports are there?: 5 (ds-test, forge-std, murky, OZ, and solmate)
+- How many external imports are there?: 1
 - How many separate interfaces and struct definitions are there for the contracts within scope?: 1 interface with 5 structs
 - Does most of your code generally use composition or inheritance?: Composition 
-- How many external calls?: 0  
-- What is the overall line coverage percentage provided by your tests?: 100% 
-- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?: False  
+- How many external calls?: 0
+- What is the overall line coverage percentage provided by your tests?: ~85% 
+- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?: Yes  
 - Please describe required context: N/A
-- Does it use an oracle?: False
+- Does it use an oracle?: No
 - Does the token conform to the ERC20 standard?:  N/A
 - Are there any novel or unique curve logic or mathematical models?: Yes, custom implementation of elliptic curve cryptography using evm pre compile.
 - Does it use a timelock function?: No
 - Is it an NFT?: No
 - Does it have an AMM?:  No
-- Is it a fork of a popular project?: False
-- Does it use rollups?: False 
-- Is it multi-chain?: False 
-- Does it use a side-chain?: False
+- Is it a fork of a popular project?: No
+- Does it use rollups?: No 
+- Is it multi-chain?: No 
+- Does it use a side-chain?: No
 ```
 
