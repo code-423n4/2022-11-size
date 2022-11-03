@@ -100,10 +100,6 @@ forge test --gas-report
 ```
 # Additional Context
 
-*Describe any novel or unique curve logic or mathematical models implemented in the contracts*
-
-*Please confirm the following scoping details.*
-
 ## Scoping Details 
 ```
 - If you have a public code repo, please share it here: N/A 
