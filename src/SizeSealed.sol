@@ -333,7 +333,7 @@ contract SizeSealed is ISizeSealed {
     /// @dev Returns all `quoteToken` to the original bidder
     /// @param auctionId `auctionId` of the auction to bid on
     /// @param bidIndex Index of the failed bid to be refunded
-    function refund(uint256 auctionId, uint256 bidIndex) public atState(idToAuction[auctionId], States.Finalized) {
+    function refund(uint256 auctionId, uint256 bidIndex) external atState(idToAuction[auctionId], States.Finalized) {
         Auction storage a = idToAuction[auctionId];
         EncryptedBid storage b = a.bids[bidIndex];
         if (msg.sender != b.sender) {
@@ -355,7 +355,7 @@ contract SizeSealed is ISizeSealed {
     /// @dev Returns won `baseToken` & any unfilled `quoteToken` to the bidder
     /// @param auctionId `auctionId` of the auction bid on
     /// @param bidIndex Index of the successful bid
-    function withdraw(uint256 auctionId, uint256 bidIndex) public atState(idToAuction[auctionId], States.Finalized) {
+    function withdraw(uint256 auctionId, uint256 bidIndex) external atState(idToAuction[auctionId], States.Finalized) {
         Auction storage a = idToAuction[auctionId];
         EncryptedBid storage b = a.bids[bidIndex];
         if (msg.sender != b.sender) {
@@ -467,7 +467,7 @@ contract SizeSealed is ISizeSealed {
         return keccak256(abi.encode(message));
     }
 
-    function computeMessage(uint128 baseAmount, bytes16 salt) public pure returns (bytes32) {
+    function computeMessage(uint128 baseAmount, bytes16 salt) external pure returns (bytes32) {
         return bytes32(abi.encodePacked(baseAmount, salt));
     }
 
