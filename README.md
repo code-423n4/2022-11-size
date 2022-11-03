@@ -1,3 +1,22 @@
+# SIZE contest details
+- Total Prize Pool: $42,500 USDC
+  - HM awards: $29,750 USDC 
+  - QA report awards: $3,500 USDC 
+  - Gas report awards: $1,750 USDC 
+  - Judge + presort awards: $7,000 USDC 
+  - Scout awards: $500 USDC 
+- Join [C4 Discord](https://discord.gg/code4rena) to register
+- Submit findings [using the C4 form](https://code4rena.com/contests/2022-11-size-contest/submit)
+- [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
+- Starts November 4, 2022 20:00 UTC
+- Ends November 8, 2022 20:00 UTC
+
+## C4udit / Publicly Known Issues
+
+The C4audit output for the contest can be found here, [include link to C4udit report], within an hour of contest opening.
+
+*Note for C4 wardens: Anything included in the C4udit output is considered a publicly known issue and is ineligible for awards.*
+
 # Overview
 
 SIZE is a matching protocol that is designed to improve the efficiency of traders wanting to buy or sell large blocks of tokens.
@@ -79,3 +98,33 @@ To report gas usage:
 ```
 forge test --gas-report 
 ```
+# Additional Context
+
+*Describe any novel or unique curve logic or mathematical models implemented in the contracts*
+
+*Please confirm the following scoping details.*
+
+## Scoping Details 
+```
+- If you have a public code repo, please share it here: N/A 
+- How many contracts are in scope?: 1
+- Total SLoC for these contracts?: 800
+- How many external imports are there?: 5 (ds-test, forge-std, murky, OZ, and solmate)
+- How many separate interfaces and struct definitions are there for the contracts within scope?: 1 interface with 5 structs
+- Does most of your code generally use composition or inheritance?: Composition 
+- How many external calls?: 0  
+- What is the overall line coverage percentage provided by your tests?: 100% 
+- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?: False  
+- Please describe required context: N/A
+- Does it use an oracle?: False
+- Does the token conform to the ERC20 standard?:  N/A
+- Are there any novel or unique curve logic or mathematical models?: Yes, custom implementation of elliptic curve cryptography using evm pre compile.
+- Does it use a timelock function?: No
+- Is it an NFT?: No
+- Does it have an AMM?:  No
+- Is it a fork of a popular project?: False
+- Does it use rollups?: False 
+- Is it multi-chain?: False 
+- Does it use a side-chain?: False
+```
+
