@@ -13,7 +13,7 @@
 
 ## C4udit / Publicly Known Issues
 
-The C4audit output for the contest can be found here, [include link to C4udit report], within an hour of contest opening.
+The C4audit output for the contest can be found [here](https://gist.github.com/Picodes/c1324d5529be4eaa0f6e4ed5200f2164).
 
 *Note for C4 wardens: Anything included in the C4udit output is considered a publicly known issue and is ineligible for awards.*
 
