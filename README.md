@@ -42,11 +42,11 @@ Tokens can be released immediately after finalization, or according to vesting p
 
 ISizeSealed is the interface file for the main sealed auction contract and includes the structs, events and errors used.
 
-> [**ECCMath.sol (41 SLOC)**](https://github.com/code-423n4/2022-11-size/blob/main/src/utils/ECCMath.sol)
+> [**ECCMath.sol (41 SLOC)**](https://github.com/code-423n4/2022-11-size/blob/main/src/util/ECCMath.sol)
 
 ECCMath is a library that wraps the precompiled contract [ecMul at 0x07](https://www.evm.codes/precompiled#0x07?fork=grayGlacier) to implement asymmetric public key encryption on the [alt_bn128 elliptic curve](https://eips.ethereum.org/EIPS/eip-197). This is used by bidders to encrypt their bid prices to the seller's public key. They will be decrypted during the finalization process to ensure the auction has been settled fairly. 
 
-> [**CommonTokenMath.sol (48 SLOC)**](https://github.com/code-423n4/2022-11-size/blob/main/src/utils/CommonTokenMath.sol)
+> [**CommonTokenMath.sol (48 SLOC)**](https://github.com/code-423n4/2022-11-size/blob/main/src/util/CommonTokenMath.sol)
 
 CommonTokenMath is a helper library used to calculate linear and cliff vesting schedules for the unlocking of tokens won in an auction.
 
