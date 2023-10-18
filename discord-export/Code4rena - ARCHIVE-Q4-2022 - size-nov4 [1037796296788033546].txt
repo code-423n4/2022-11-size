@@ -1,0 +1,794 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q4-2022 / size-nov4
+==============================================================
+
+[11/03/2022 18:43] itsmetechjay (pinned)
+👋 Hello and welcome to the contest channel for the $42,500 USDC **SIZE** contest!
+
+📆 Contest opens Friday, 04 November 2022 20:00 (20:00 UTC) and runs through Tuesday, 08 November 2022 20:00  (20:00 UTC) (4 days).
+
+Please give a warm welcome to the SIZE team, particularly @cheb, @tdudz, and @Rage who will be available for questions either here in the channel or via DM.
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, consider enabling notifications for this channel. 🐺 ⏰
+
+Contest Page: https://code4rena.com/contests/2022-11-size-contest
+
+{Embed}
+https://code4rena.com/contests/2022-11-size-contest
+Code4rena SIZE contest
+$42,500 USDC
+4 November 2022—8 November 2022
+Code4rena - ARCHIVE-Q4-2022 - size-nov4 [1037796296788033546].txt_Files/C4-banner-7C19B.png
+
+{Reactions}
+🥳 ❤️ (2) 🔥 🚀 (2) 
+
+[11/03/2022 18:44] itsmetechjay
+Pinned a message.
+
+
+[11/04/2022 01:30] chaduke3730
+Looking forwatd to it
+
+{Reactions}
+❤️ 
+
+[11/04/2022 20:04] nic2328
+hey guys- nicole maffeo here. cofounder at size. amped for this code arena. dudz / cheb / rage are your go to ppl. wanted to say hi though!!
+
+{Reactions}
+👋 (6) 
+
+[11/04/2022 20:07] thepicodes (pinned)
+**Automated findings:** https://gist.github.com/Picodes/c1324d5529be4eaa0f6e4ed5200f2164
+
+
+[11/04/2022 20:07] itsmetechjay
+Pinned a message.
+
+
+[11/04/2022 20:32] itsmetechjay (pinned)
+Wardens, please note that c4udit output has been posted above and added to pinned posts. These are considered publicly known issues and are not eligible for awards.
+
+Automated findings: https://gist.github.com/Picodes/c1324d5529be4eaa0f6e4ed5200f2164
+
+This will also be linked in the contest README file shortly.
+
+
+[11/04/2022 20:32] itsmetechjay
+Pinned a message.
+
+
+[11/04/2022 22:21] tkclassic#9114
+gm
+
+
+[11/04/2022 22:31] birdy0219
+:GM:
+
+{Reactions}
+❤️ 
+
+[11/04/2022 23:32] road220
+who can I dm for tech related questions?
+
+
+[11/04/2022 23:33] rag.e
+I'll be active for the next few hours, feel free to dm
+
+
+[11/05/2022 00:03] ladboy233
+@Rage
+
+
+[11/05/2022 00:03] ladboy233
+May I please DM you?
+
+
+[11/05/2022 00:03] rag.e
+yes!
+
+
+[11/05/2022 00:46] 0x1f8b
+Hi, some scoped contracts links are broken, but the scope it's clear and for me it's ok
+
+
+[11/05/2022 00:49] rag.e
+aah good catch, util instead of utils
+
+{Reactions}
+✅ (2) 
+
+[11/05/2022 02:35] evmcheb
+gm
+
+
+[11/05/2022 02:36] evmcheb
+am also available to answer any tech q's :))
+
+
+[11/05/2022 06:55] .erensa
+helo size teams, I just want to make sure that scope are only 4 smart contract right? becuase some smart contract repo link are broken
+
+
+[11/05/2022 10:48] ladboy233
+Does anytime have an issue compiling the code? it compiles, it just take a really long to compile. Looks like a foundry issue rather than a code isue.
+
+
+[11/05/2022 10:56] ladboy233
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2022 - size-nov4 [1037796296788033546].txt_Files/image-FD642.png
+
+
+[11/05/2022 10:56] ladboy233
+this is like taking 3 - 4 minutes to compile.
+
+{Reactions}
+😂 (2) same (2) 
+
+[11/05/2022 10:56] 0xdapper
+via ir is usually slow
+
+
+[11/05/2022 11:01] ladboy233
+What is "via ir"?
+
+
+[11/05/2022 11:03] 0xdapper
+https://docs.soliditylang.org/en/latest/ir-breaking-changes.html
+
+
+[11/05/2022 11:54] tdudz#4673
+yes it takes about the same for me, indeed because of via-ir
+
+
+[11/05/2022 11:56] exd0tpy
+Is there a walkaround?
+
+
+[11/05/2022 12:37] jayphbee
+If u set `via-ir=false` in foundry.toml. There will be stack too deep compile error
+
+
+[11/05/2022 12:37] jayphbee
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2022 - size-nov4 [1037796296788033546].txt_Files/unknown-6B612.png
+
+
+[11/05/2022 15:57] evmcheb
+this is due to an issue in forge-std 1.0.0
+
+
+[11/05/2022 15:57] 0xdapper
+yep, thats one of the recent solutions to stack too deep errors
+
+
+[11/05/2022 15:57] evmcheb
+https://github.com/foundry-rs/forge-std/issues/207
+
+{Embed}
+https://github.com/foundry-rs/forge-std/issues/207
+v1.0.0 causes compiling with `via-ir` to take substantially longer ...
+Recently, I added a via-ir testing to Solady for more robust testing, since it is a library. However, with the latest version of forge-std, the CI is still unable to finish compiling the code after...
+Code4rena - ARCHIVE-Q4-2022 - size-nov4 [1037796296788033546].txt_Files/207-C095B
+
+
+[11/05/2022 15:57] evmcheb
+you might be able to get around it by downgrading forge-std
+
+
+[11/05/2022 16:19] ladboy233
+ok thanks
+
+{Reactions}
+❤️ 
+
+[11/05/2022 21:32] chaduke3730
+Hey the two files: ECCMath.sol and CommonTokenMath.sol (48 SLOC) seem to be inaacessible
+
+
+[11/05/2022 21:33] chaduke3730
+https://code4rena.com/contests/2022-11-size-contest
+
+{Embed}
+https://code4rena.com/contests/2022-11-size-contest
+Code4rena SIZE contest
+$42,500 USDC
+4 November 2022—8 November 2022
+Code4rena - ARCHIVE-Q4-2022 - size-nov4 [1037796296788033546].txt_Files/a54b775a-0022-42dc-96d1-fe9fad1eaef0-876EE
+
+
+[11/05/2022 21:33] rag.e
+Hi the links are broken, those are in the src/util folder
+
+
+[11/05/2022 22:19] chaduke3730
+ok
+
+
+[11/05/2022 22:19] chaduke3730
+thanks
+
+
+[11/05/2022 22:19] chaduke3730
+@chaduke
+
+
+[11/06/2022 00:53] aviggiano
+Great code & docs 👏
+
+{Reactions}
+🔥 ❤️ 
+
+[11/06/2022 04:06] neko_nyaa
+Is there a judge online I can ping on this contest's matter? Thanks
+
+
+[11/06/2022 04:06] 100proof
+Why a judge? Just DM the sponsors.
+
+
+[11/06/2022 04:07] neko_nyaa
+:­) it's something of a contest-specific rules and need advices on submitting reports
+
+
+[11/06/2022 04:08] neko_nyaa
+Do tell me if that's against the rules, I don't intend to break anything, hence why I'm asking first
+
+
+[11/06/2022 07:16] jm217
+Could anyone explain about `address(0x07).staticcall{gas: 6000}(data)` in ECCMath.sol#28?
+
+
+[11/06/2022 07:17] 0xdapper
+0x07 is the ecMul precompile
+
+{Reactions}
+🙏 (3) 
+
+[11/06/2022 07:17] 0xdapper
+<https://www.evm.codes/precompiled>
+
+
+[11/06/2022 08:17] evmcheb
+to revert to v0.3 you can use
+`forge install foundry-rs/forge-std@c19dfd2f2a88a461216b0dd1f4961e1a85dcad46`
+which should fix compile times
+
+{Reactions}
+🧠 
+
+[11/06/2022 08:19] evmcheb
+I don't believe there are any major changes between 0.3 and v1 but fwiw this is not a change to the project directory just a hotfix if compile times are annoying
+
+
+[11/06/2022 13:31] lukejohn_
+any documentation for the math part, espeically encrypt/decrypt messages using Point/pubkey/privkey?
+
+
+[11/06/2022 15:10] c7e7eff
+Any of the sponsors online I can DM ?
+
+
+[11/06/2022 15:13] evmcheb
+feel free to DM
+
+
+[11/06/2022 15:15] c7e7eff
+DM sent
+
+
+[11/06/2022 19:28] chaduke3730
+How were clearingBase and clearingQuote determined in function finalize?
+
+
+[11/06/2022 19:28] chaduke3730
+Offline?
+
+
+[11/06/2022 19:28] rag.e
+yes
+
+
+[11/06/2022 19:28] rag.e
+the caller will decrypt the bids and determine the lowest clearing price of the auction
+
+
+[11/06/2022 19:30] chaduke3730
+Then one needs to verify these numbers are cottect online just like we need to verify the sorting  is cottect
+
+
+[11/06/2022 19:30] rag.e
+the verification of the sorting + clearing price is all done in finalize
+
+
+[11/06/2022 19:30] chaduke3730
+Ok thanks
+
+{Reactions}
+👍 
+
+[11/06/2022 19:33] chaduke3730
+L297 i guess is where the clearing price is checked
+
+{Reactions}
+👍 
+
+[11/06/2022 19:37] koolexc
+This project looks interesting ! I liked it already before even digging deeper
+
+{Reactions}
+❤️ 
+
+[11/06/2022 19:42] koolexc
+What does "the emission schedule for the sold tokens" mean?
+
+
+[11/06/2022 19:43] rag.e
+Sellers can choose vesting parameters that will determine the schedule for token unlocks after the auction is finished
+
+
+[11/06/2022 19:45] koolexc
+is that happening regardless if the tokens were sold ?
+
+
+[11/06/2022 19:45] koolexc
+Just trying to understand  the unlocking here
+
+
+[11/06/2022 19:45] rag.e
+Unsold tokens get returned to the seller, the sold tokens are vested by the buyers
+
+
+[11/06/2022 19:46] koolexc
+Thank you! I'm wondering in what cases this is beneficial to the sellers or even buyers?
+
+
+[11/06/2022 19:49] rag.e
+A seller could be motivated to add vesting to slow down the sell pressure of the tokens, if the seller is a large holder for example
+
+Buyers would obviously like no vesting, so the likely scenario is that vested auctions command a discount to the market price
+
+{Reactions}
+👍🏻 
+
+[11/06/2022 19:50] koolexc
+Thanks! that makes sense
+
+
+[11/06/2022 19:51] rag.e
+Great, thanks for the questions
+
+{Reactions}
+🙏🏻 
+
+[11/06/2022 20:02] raymondfam
+Is quoteAmount the number of quoteToken for each baseToken?
+
+
+[11/06/2022 20:15] koolexc
+what is supposed to happen if the seller doesn't reveal the private key in 24 hours after a finished auction?
+
+
+[11/06/2022 23:23] rag.e
+quoteAmount is the amount of quoteToken for the entire baseAmount (after decryption)
+for example
+
+1000 usdc (quoteAmount) for 1 eth (baseAmount)
+
+{Reactions}
+👀 
+
+[11/06/2022 23:24] rag.e
+The auction is voided, and all bids can be cancelled and refunded. The seller is refunded as well
+
+
+[11/06/2022 23:35] raymondfam
+So this ratio serves as the price a bidder is willing to pay for?
+
+
+[11/06/2022 23:35] rag.e
+yes!
+
+
+[11/06/2022 23:35] rag.e
+and that price is hidden until the seller's key is revealed
+
+
+[11/06/2022 23:38] raymondfam
+Great. The conditional check on lines 103 - 105 serves both as a token code existence check and also filtering off fee on transfer token?
+
+
+[11/06/2022 23:38] rag.e
+yes it accomplishes both
+
+
+[11/06/2022 23:39] raymondfam
+Thanks
+
+
+[11/07/2022 07:20] c7e7eff
+So it's the intent the seller can just not do the reveal?
+
+
+[11/07/2022 07:26] trust90
+Yeah, there is a safeguard in place, buyers can canceBid
+
+
+[11/07/2022 11:53] koolexc
+compiling is still taking long .. although I installed 
+`forge install foundry-rs/forge-std@c19dfd2f2a88a461216b0dd1f4961e1a85dcad46 `
+any ideas how to go around this issue?
+
+{Reactions}
+🧐 
+
+[11/07/2022 15:09] evmcheb
+can you try `forge install foundry-rs/forge-std@2a2ce3692b8c1523b29de3ec9d961ee9fbbc43a6`?
+
+
+[11/07/2022 15:09] evmcheb
+both `c19d` and `2a2c` take about 40 seconds on my machine
+
+
+[11/07/2022 15:11] evmcheb
+from scratch after a forge clean
+
+
+[11/07/2022 15:59] redonen_
+Hello, could anyone explain why does the multiplication by "type(uint128).max" is applied on line 78 ?
+
+
+[11/07/2022 16:05] evmcheb
+We multiply by `type(uint128).max` to ensure there are no rounding errors in the division, since there might be many less decimals in the quoteToken than the baseToken
+
+
+[11/07/2022 16:35] redonen_
+Thanks for the reply ! Same for the ReserveQuotePerBase when declared I guess  ?
+
+
+[11/07/2022 17:52] bizzyvinci
+Is there a documentation about size protocol and seal?
+
+
+[11/07/2022 18:34] trustminimised
+I found a whitepaper on google, but that's all that turned up for me.
+
+
+[11/07/2022 21:55] rag.e
+We don't have a whitepaper, the documentation right now is the readme and the code/natspec
+
+
+[11/07/2022 22:29] raymondfam
+type(uint128).max is a very big number. If you multiply it with auctionParams.minimumBidQuote, isn't it going to easily exceed the total reserve?
+
+
+[11/07/2022 22:31] 100proof
+You can multiply two 128-bit numbers together within 256 bits without overflow.
+
+{Reactions}
+👍 
+
+[11/07/2022 22:31] rag.e
+reserve is a uint256
+you can verify for yourself that any uint128 * uint128 will never overflow that
+
+
+[11/07/2022 22:32] 100proof
+The proof relies on the mathematical fact that
+`2**n * 2**m == 2**(m + n)`
+
+{Reactions}
+🧠 
+
+[11/07/2022 22:32] 100proof
+If `m` and `n` are both `128` you're fine.
+
+
+[11/07/2022 23:08] raymondfam
+Thanks. I DM you both.
+
+
+[11/08/2022 06:46] dinesh11g
+@Rage check DM
+
+
+[11/08/2022 09:05] evmcheb
+I am available for DMs
+
+
+[11/08/2022 09:12] trust90
+Please try to keep discussions about your points of interest in DM, thanks
+
+
+[11/08/2022 09:13] trust90
+If this happened to be a bug, you would have screwed anyone that has already found it
+
+{Reactions}
+👍 
+
+[11/08/2022 10:49] koolexc
+I've tried this as well. it takes 3 minutes at least
+
+
+[11/08/2022 10:49] koolexc
+Thank you though ...
+
+
+[11/08/2022 11:05] dinesh11g
+check DM
+
+
+[11/08/2022 12:17] .mangyvagrant
+@cheb check DM
+
+
+[11/08/2022 12:31] evmcheb
+responded to both
+
+
+[11/08/2022 12:34] koolexc
+@cheb  Please check DM
+
+
+[11/08/2022 14:43] nic2328
+@Rage @tdudz if cheb asleep
+
+{Reactions}
+👌🏻 thankyou 
+
+[11/08/2022 14:46] itsmetechjay
+If you need help, can you open a help desk request please: https://code4rena.com/help
+
+
+[11/08/2022 16:07] trustminimised
+@Rage I can't quite understand this comment due to the grammar.
+In `cancelBid()` `// Only allow bid cancellations while not finalized or in the reveal period`
+Does this mean that cancellations are only intentionally allowed while the auction state is "AcceptingBids"? Or "AcceptingBids" _and_ "RevealPeriod"?
+
+
+[11/08/2022 16:12] rag.e
+yea that comment is a bit bad
+its saying
+
+not allowed in either Finalized or RevealPeriod
+
+
+[11/08/2022 16:13] trustminimised
+Thanks
+
+
+[11/08/2022 20:02] C4
+**🚨 CONTEST ALERT**
+
+@🐺wardens  The **SIZE** contest is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the contest is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a gardener if you have questions along the way!
+
+{Reactions}
+✅ (10) 👍 (4) 
+
+[11/08/2022 20:04] cryptphi
+pardon my last minute submissions...lol. last one had 8 seconds left on the clock. I had to submit without a recommendation 😅
+
+{Reactions}
+❤️ (7) 
+
+[11/08/2022 20:39] lukejohn_
+Best luck to all!
+
+
+[11/09/2022 02:00] .erensa
+wish me luck
+
+
+[11/09/2022 05:23] evmcheb
+huge thanks to everyone that participated and submitted findings!!!! looking forward to going through them with the team 🤩
+
+{Reactions}
+hi5 (9) 
+
+[11/09/2022 13:59] nic2328
+yes thank you all so much
+
+
+[11/09/2022 14:00] nic2328
+please reach out if any follow ups or questions about size
+
+
+[11/09/2022 18:18] cryptphi
+@cheb okay to DM?
+
+
+[11/09/2022 19:11] korkuthan.shm
+Hi
+
+
+[11/10/2022 04:00] evmcheb
+@cryptphi sure
+
+
+[11/10/2022 07:59] cryptphi
+dropped you a DM 🙂
+
+
+[11/10/2022 13:05] chaduke3730
+good luck to all
+
+
+[11/16/2022 05:14] Neon2835#2835
+hello team, any update ?
+
+
+[11/29/2022 09:02] shawn_xu
+👀
+
+
+[12/06/2022 22:27] itsmetechjay
+🤑 🎉 Awards for **SIZE**:
+
+$12,443.80 USDC » @hansfriese 
+$5,573.03 USDC » @comradeKtg 
+$4,640.15 USDC » @ronnyx2017 | Offside Labs 
+$1,600.49 USDC » @0x1f8b 
+$1,076.83 USDC » @RaymondFam 
+$720.22 USDC » @Josiah 
+$667.31 USDC » @c7e7eff/RustyRabbit 
+$526.80 USDC » @rvierdiiev 
+$489.29 USDC » @Bnke 
+$482.52 USDC » @Roman 
+$473.97 USDC » @gz627 
+$436.13 USDC » V_B (@Barichek, @Vlad B | zkSync)
+$366.50 USDC » M4TZ1P (@DekaiHako, @0xDanielH, @Zer0Luck, @AAIIWITF, @PENGUN)
+$259.15 USDC » @Trust 
+$221.94 USDC » @cccz 
+$213.40 USDC » @zapaz 
+$213.40 USDC » @neumo 
+$205.93 USDC » @KingNFT 
+$203.70 USDC » @djxploit 
+$190.87 USDC » @neko_nyaaaaaaaaaaaaaaaaaaaaaaaaa 
+$182.57 USDC » @ctf_sec 
+$182.57 USDC » @brgltd 
+$176.56 USDC » @8olidity 
+$167.25 USDC » @fs0c 
+$158.71 USDC » @Picodes | Angle 
+$158.71 USDC » @HE1M 
+$158.71 USDC » KIntern_NA (@TrungOre, @duc)
+$153.10 USDC » @JTJabba 
+$153.10 USDC » @bin2chen 
+$153.10 USDC » PwnedNoMore (@izhuer, @ItsNio, @papr1ka2)
+$146.83 USDC » @horsefacts 
+$146.83 USDC » TwelveSec (@Deleted User , @gkaragiannidis, @0xRav3n )
+$138.28 USDC » @jayphbee 
+$138.28 USDC » @Matin 
+$126.44 USDC » @cryptonue 
+$73.96 USDC » @0xSmartContract 
+$71.02 USDC » @slowmoses 
+$65.42 USDC » @ReyAdmirado 
+$65.42 USDC » @aviggiano 
+$65.42 USDC » @ajtra 
+$65.42 USDC » @lukris02 
+$65.42 USDC » @Deivitto 
+$65.42 USDC » @B2
+$65.42 USDC » @code-cipher 
+$52.83 USDC » @0xc0ffEE 
+$49.89 USDC » @RedOneN 
+$49.89 USDC » @simon135 
+$46.82 USDC » @R2
+$44.29 USDC » @Rahoz 
+$44.29 USDC » @shark 
+$44.29 USDC » @delfin454000 
+$44.29 USDC » @peanuts 
+$44.29 USDC » @tnevler 
+$44.29 USDC » @trustminimised 
+$38.28 USDC » @cryptphi 
+$35.28 USDC » @TomJ 
+$29.67 USDC » @cryptostellar5 
+$26.74 USDC » @skyle 
+$26.74 USDC » @chaduke 
+$21.13 USDC » @0xwhiteDevil 
+$21.13 USDC » @0xdeadbeef0x 
+$21.13 USDC » @gianganhnguyen 
+$21.13 USDC » @Rolezn 
+$21.13 USDC » @thinklab 
+$21.13 USDC » @Diana 
+$21.13 USDC » @Sathish9098 
+$21.13 USDC » @Dinesh11G 
+$21.13 USDC » @karanctf 
+$21.13 USDC » @ret2basic.eth 
+$21.13 USDC » @gogo 
+$21.13 USDC » @mcwildy 
+$21.13 USDC » @gkrastenov 
+$21.13 USDC » @JC
+$14.15 USDC » @0xladboy | Sparkware 
+$14.15 USDC » @minhtrng 
+$14.15 USDC » @wagmi 
+$14.15 USDC » @__141345__ 
+$8.54 USDC » @0x52 
+$8.54 USDC » @Ruhum 
+$8.54 USDC » tonisives
+$8.54 USDC » @pashov 
+$8.54 USDC » @sashik_eth 
+$5.60 USDC » @0xdapper 
+$5.60 USDC » @yixxas 
+$5.60 USDC » @codexploder 
+$5.60 USDC » @hihen 
+$5.60 USDC » @joestakey 
+$5.60 USDC » @corerouter 
+
+🏁 Findings summary
+---------------------------
+High risk findings: 19 total, 2 unique
+Med risk findings: 88 total, 7 unique
+Gas findings: 31
+QA findings: 29
+
+Awards will be distributed on Polygon within the next 1-2 weeks. Congratulations all! 💸 💸 💸
+
+{Reactions}
+❤️ (2) 🎉 (3) 
+
+[12/06/2022 22:30] itsmetechjay
+***Note: If you participated in this contest and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.***
+
+
+[12/06/2022 22:33] shawn_xu
+Why is the H-01 only 0.33USDC?And I'm not on the list above.👀
+
+
+[12/06/2022 23:08] cloudellie
+I think you may be looking at the results for a different contest.
+
+
+[12/06/2022 23:15] shawn_xu
+Sorry, at first I saw the title was add size result, I thought it was just for the size item. However, I did submit two issues for size.
+
+{Reactions}
+👍 
+
+[12/06/2022 23:18] cloudellie
+We're cueing up a few contest announcements and will post the leaderboard updates as soon as they've been reviewed and approved internally.
+
+
+[12/06/2022 23:21] 0xdeadbeef0x
+@CloudEllie - away are all announcements in the current PR or is there more surprises today? 🙂
+
+
+[12/07/2022 04:35] chaduke3730
+glad I got $26.88 USDC » @chaduke
+
+{Reactions}
+🎉 (3) 
+
+[12/07/2022 08:55] c7e7eff
+Is it just me or are there multiple entries for the same finding and warden on the same contest ?
+
+
+[12/07/2022 15:31] itsmetechjay
+Please note that the award announcement above has been updated.  See this post in #🐺wardens for more info: https://discord.com/channels/810916927919620096/810936719003090974/1050070705154314301
+
+
+[12/15/2022 16:59] sathish9098kumar
+rewards distributed  ? Not received
+
+{Reactions}
+👀 
+
+[12/15/2022 17:01] itsmetechjay
+If you don't mind sending me a DM, I can take a look.
+
+
+[12/15/2022 17:11] sathish9098kumar
+@Jay | C4 okay
+
+{Reactions}
+thankyou 
+
+==============================================================
+Exported 143 message(s)
+==============================================================
